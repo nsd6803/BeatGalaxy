@@ -1,4 +1,12 @@
+<<<<<<< Updated upstream
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1-x86_64/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1-x86_64/Editor/Data/PlaybackEngines'
+=======
+<<<<<<< HEAD
+Base path: 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1-x86_64/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1-x86_64/Editor/Data/PlaybackEngines'
+=======
+Base path: 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/PlaybackEngines'
+>>>>>>> main
+>>>>>>> Stashed changes
 Cmd: initializeCompiler
 
 

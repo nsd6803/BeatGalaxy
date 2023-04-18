@@ -1,1 +1,9 @@
+<<<<<<< Updated upstream
 D:\Projects\BeatGalaxy
+=======
+<<<<<<< HEAD
+D:\Projects\BeatGalaxy
+=======
+C:\Users\nsd68\Desktop\Unity\BeatGalaxy
+>>>>>>> main
+>>>>>>> Stashed changes
