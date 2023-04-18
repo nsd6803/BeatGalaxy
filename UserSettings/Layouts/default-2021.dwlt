@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 86
+  controlID: 87
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 87
+  controlID: 88
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 88
+  controlID: 89
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -292,21 +292,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\nsd68\Desktop\Unity\BeatGalaxy
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 94560000
-    m_LastClickedID: 22164
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 8a560000
+    m_LastClickedID: 22154
     m_ExpandedIDs: 000000008a56000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004c5800005e5e000042580000725e000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -424,9 +424,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 90560000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9ef9ffffdaf9ffff0afaffff38faffff38fbffff
+      m_ExpandedIDs: 38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
