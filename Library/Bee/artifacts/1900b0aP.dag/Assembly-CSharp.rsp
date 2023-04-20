@@ -302,6 +302,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/Scenes/Buttons.cs"
+"Assets/Scripts/AudioPlayer.cs"
 "Assets/Scripts/AudioSlider.cs"
 "Assets/Scripts/Exit.cs"
 "Assets/Scripts/MainMenu.cs"
