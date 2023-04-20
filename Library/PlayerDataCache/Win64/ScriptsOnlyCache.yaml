@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AudioSlider
+    - Buttons
     - Exit
     - MainMenu
     - MuteAudio
@@ -16,7 +17,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TMP_SubMeshUI
     - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -37,7 +37,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Toggle
   serializedClasses:
@@ -105,6 +104,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MuteAudio
     methodName: ButtonClicked
+  - assembly: Assembly-CSharp
+    fullTypeName: Buttons
+    methodName: PlayButton
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -126,6 +128,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Exit
     methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: Buttons
+    methodName: MenuButton
   sceneClasses:
     Assets/Scenes/Menu.unity:
     - Class: 1
@@ -153,8 +158,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1580}
     - Class: 114
-      Script: {instanceID: 1696}
-    - Class: 114
       Script: {instanceID: 2130}
     - Class: 114
       Script: {instanceID: 2534}
@@ -175,29 +178,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3942}
     - Class: 114
-      Script: {instanceID: 4020}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 4100}
+      Script: {instanceID: 4022}
     - Class: 114
-      Script: {instanceID: 4186}
+      Script: {instanceID: 4188}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4742}
     - Class: 114
-      Script: {instanceID: 4782}
+      Script: {instanceID: 4784}
     - Class: 114
-      Script: {instanceID: 4854}
+      Script: {instanceID: 4856}
     - Class: 114
-      Script: {instanceID: 5370}
+      Script: {instanceID: 5372}
     - Class: 114
-      Script: {instanceID: 5518}
+      Script: {instanceID: 5520}
     - Class: 114
-      Script: {instanceID: 5820}
+      Script: {instanceID: 5822}
     - Class: 114
-      Script: {instanceID: 6924}
+      Script: {instanceID: 6926}
     - Class: 114
-      Script: {instanceID: 23306}
+      Script: {instanceID: 22742}
     - Class: 114
-      Script: {instanceID: 35826}
+      Script: {instanceID: 26962}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,6 +224,59 @@ ScriptsOnlyBuild:
     - Class: 243
       Script: {instanceID: 0}
     - Class: 245
+      Script: {instanceID: 0}
+    Assets/Scenes/Victory.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1580}
+    - Class: 114
+      Script: {instanceID: 2534}
+    - Class: 114
+      Script: {instanceID: 2724}
+    - Class: 114
+      Script: {instanceID: 3000}
+    - Class: 114
+      Script: {instanceID: 4856}
+    - Class: 114
+      Script: {instanceID: 5372}
+    - Class: 114
+      Script: {instanceID: 5520}
+    - Class: 114
+      Script: {instanceID: 5822}
+    - Class: 114
+      Script: {instanceID: 26962}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -679,6 +735,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Exit
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1242,8 +1304,9 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Exit
+    className: Buttons
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
+  - Assets/Scenes/Victory.unity
   playerPath: C:/Users/nsd68/Desktop/Unity/Build/TowerDefense.exe
