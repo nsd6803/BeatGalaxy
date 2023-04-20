@@ -15,7 +15,6 @@ public class MuteAudio : MonoBehaviour
     {
 		soundOnImage = button.image.sprite;
     }
-	
 	void Update()
 	{
 
