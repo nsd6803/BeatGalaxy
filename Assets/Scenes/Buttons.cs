@@ -7,12 +7,16 @@ public class Buttons : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level_Selection");
     }
 
+    public void BackButton() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 
     public void MenuButton()
     {
         SceneManager.LoadScene(0);
     }
+
 }
