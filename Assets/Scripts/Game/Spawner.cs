@@ -12,12 +12,12 @@ public class Spawner : MonoBehaviour
     public Transform spawnTowerRoot;
     //list of towers (UI)
     public List<Image> towersUI;
+
+    ShipCost shipCost;
     //id of tower to spawn
     int spawnID = -1;
     //SpawnPoints Tilemap
     public Tilemap spawnTilemap;
-
-    public int plantCost = 10;
 
     public GameObject gameobject;
     public CoinManager coinManager;
@@ -56,7 +56,17 @@ public class Spawner : MonoBehaviour
             //check if we can spawn in that cell (collider)
             if (spawnTilemap.GetColliderType(cellPosDefault) == Tile.ColliderType.Sprite)
             {
-                if (coinManager.coinCount >= plantCost) // если у игрока достаточно монет для покупки растения
+                if (coinManager.coinCount >= 5 && spawnID == 0) // если у игрока достаточно монет для покупки растения
+                {
+                    SpawnTower(cellPosDefault);
+                    spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
+                }
+                else if (coinManager.coinCount >= 10 && spawnID == 1) // если у игрока достаточно монет для покупки растения
+                {
+                    SpawnTower(cellPosDefault);
+                    spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
+                }
+                else if (coinManager.coinCount >= 15 && spawnID == 2) // если у игрока достаточно монет для покупки растения
                 {
                     SpawnTower(cellPosDefault);
                     spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
@@ -72,14 +82,24 @@ public class Spawner : MonoBehaviour
 
     void SpawnTower(Vector3 position)
     {
-        coinManager.coinCount -= plantCost;
+        if(spawnID == 0)
+        {
+            coinManager.coinCount -= 5;
+        }
+        else if (spawnID == 1)
+        {
+            coinManager.coinCount -= 10;
+        }
+        else if (spawnID == 2)
+        {
+            coinManager.coinCount -= 15;
+        }
         coinManager.CoinStatus();
         GameObject tower = Instantiate(towersPrefabs[spawnID], spawnTowerRoot);
         tower.transform.position = position;
         tower.transform.localScale -= new Vector3(0.6f, 0.6f, 0.0f);
 
 
-        DeselectTowers();
     }
 
     public void RevertCellState(Vector3Int pos)
@@ -89,20 +109,13 @@ public class Spawner : MonoBehaviour
 
     public void SelectTower(int id)
     {
-        DeselectTowers();
+   
         //Set the spawnID
         spawnID = id;
 
     }
 
-    public void DeselectTowers()
-    {
-        spawnID = -1;
-        foreach (var t in towersUI)
-        {
-            t.color = new Color(0.7f, 0.7f, 0.7f);
-        }
-    }
+
 
 
 

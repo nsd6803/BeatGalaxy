@@ -347,6 +347,7 @@
 "Assets/Scripts/Exit.cs"
 "Assets/Scripts/Game/EnemySpawner.cs"
 "Assets/Scripts/Game/GameManager.cs"
+"Assets/Scripts/Game/ShipCost.cs"
 "Assets/Scripts/Game/Spawner.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MuteAudio.cs"

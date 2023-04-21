@@ -9,6 +9,7 @@ public class CoinManager : MonoBehaviour
     public int coinCount = 0;
     public float timerDuration = 2.0f;
     private float timer = 0.0f;
+    public int price = 5;
 
     public TMP_Text coinText; // поле для хранения ссылки на элемент Text
 
