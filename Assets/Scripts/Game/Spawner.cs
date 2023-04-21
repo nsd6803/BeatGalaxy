@@ -17,6 +17,17 @@ public class Spawner : MonoBehaviour
     //SpawnPoints Tilemap
     public Tilemap spawnTilemap;
 
+    public int plantCost = 10;
+
+    public GameObject gameobject;
+    public CoinManager coinManager;
+
+    void Start()
+    {
+        gameobject = GameObject.Find("CoinBar");
+        coinManager = gameobject.GetComponentInChildren<CoinManager>();
+    }
+
     void Update()
     {
         if (CanSpawn())
@@ -45,14 +56,24 @@ public class Spawner : MonoBehaviour
             //check if we can spawn in that cell (collider)
             if (spawnTilemap.GetColliderType(cellPosDefault) == Tile.ColliderType.Sprite)
             {
-                SpawnTower(cellPosDefault);
-                spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
+                if (coinManager.coinCount >= plantCost) // если у игрока достаточно монет для покупки растения
+                {
+                    SpawnTower(cellPosDefault);
+                    spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
+                }
+                else
+                {
+                    Debug.Log("Not enough coins!"); // выводим сообщение о нехватке монет
+                }
+              
             }
         }
     }
 
     void SpawnTower(Vector3 position)
     {
+        coinManager.coinCount -= plantCost;
+        coinManager.CoinStatus();
         GameObject tower = Instantiate(towersPrefabs[spawnID], spawnTowerRoot);
         tower.transform.position = position;
         tower.transform.localScale -= new Vector3(0.6f, 0.6f, 0.0f);
@@ -71,8 +92,7 @@ public class Spawner : MonoBehaviour
         DeselectTowers();
         //Set the spawnID
         spawnID = id;
-        //Highlight the tower
-        towersUI[spawnID].color = Color.white;
+
     }
 
     public void DeselectTowers()

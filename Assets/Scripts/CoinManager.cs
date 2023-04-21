@@ -28,4 +28,9 @@ public class CoinManager : MonoBehaviour
             coinText.text = coinCount.ToString();
         }
     }
+
+    public void CoinStatus()
+    {
+        coinText.text = coinCount.ToString();
+    }
 }
