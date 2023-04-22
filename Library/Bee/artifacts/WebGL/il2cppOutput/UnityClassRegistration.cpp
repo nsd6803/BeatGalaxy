@@ -141,8 +141,10 @@ class GridLayout; template <> void RegisterUnityClass<GridLayout>(const char*);
 class Collider; template <> void RegisterUnityClass<Collider>(const char*);
 class PhysicsManager; template <> void RegisterUnityClass<PhysicsManager>(const char*);
 class Rigidbody; template <> void RegisterUnityClass<Rigidbody>(const char*);
+class BoxCollider2D; template <> void RegisterUnityClass<BoxCollider2D>(const char*);
 class Collider2D; template <> void RegisterUnityClass<Collider2D>(const char*);
 class Physics2DSettings; template <> void RegisterUnityClass<Physics2DSettings>(const char*);
+class Rigidbody2D; template <> void RegisterUnityClass<Rigidbody2D>(const char*);
 namespace TextRendering { class Font; } template <> void RegisterUnityClass<TextRendering::Font>(const char*);
 namespace TextRenderingPrivate { class TextMesh; } template <> void RegisterUnityClass<TextRenderingPrivate::TextMesh>(const char*);
 class Tilemap; template <> void RegisterUnityClass<Tilemap>(const char*);
@@ -156,7 +158,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 84 non stripped classes
+	//Total: 86 non stripped classes
 	//0. AnimationClip
 	RegisterUnityClass<AnimationClip>("Animation");
 	//1. Animator
@@ -305,25 +307,29 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<PhysicsManager>("Physics");
 	//73. Rigidbody
 	RegisterUnityClass<Rigidbody>("Physics");
-	//74. Collider2D
+	//74. BoxCollider2D
+	RegisterUnityClass<BoxCollider2D>("Physics2D");
+	//75. Collider2D
 	RegisterUnityClass<Collider2D>("Physics2D");
-	//75. Physics2DSettings
+	//76. Physics2DSettings
 	RegisterUnityClass<Physics2DSettings>("Physics2D");
-	//76. Font
+	//77. Rigidbody2D
+	RegisterUnityClass<Rigidbody2D>("Physics2D");
+	//78. Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//77. TextMesh
+	//79. TextMesh
 	RegisterUnityClass<TextRenderingPrivate::TextMesh>("TextRendering");
-	//78. Tilemap
+	//80. Tilemap
 	RegisterUnityClass<Tilemap>("Tilemap");
-	//79. TilemapCollider2D
+	//81. TilemapCollider2D
 	RegisterUnityClass<TilemapCollider2D>("Tilemap");
-	//80. TilemapRenderer
+	//82. TilemapRenderer
 	RegisterUnityClass<TilemapRenderer>("Tilemap");
-	//81. Canvas
+	//83. Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//82. CanvasGroup
+	//84. CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//83. CanvasRenderer
+	//85. CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
 
 }

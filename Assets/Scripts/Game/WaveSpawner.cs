@@ -26,6 +26,11 @@ public class WaveSpawner : MonoBehaviour
     private bool canSpawn = true;
     private bool canAnimate = false;
 
+    void Start()
+    {
+
+    }
+
     private void Update()
     {
         currentWave = waves[currentWaveNumber];

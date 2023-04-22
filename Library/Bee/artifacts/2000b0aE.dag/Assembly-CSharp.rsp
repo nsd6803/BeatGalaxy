@@ -322,6 +322,8 @@
 "Assets/Scenes/Buttons.cs"
 "Assets/Scripts/AudioPlayer.cs"
 "Assets/Scripts/AudioSlider.cs"
+"Assets/Scripts/Button_To_Level.cs"
+"Assets/Scripts/Button_to_Menu.cs"
 "Assets/Scripts/CoinManager.cs"
 "Assets/Scripts/Exit.cs"
 "Assets/Scripts/Game/Boss.cs"
