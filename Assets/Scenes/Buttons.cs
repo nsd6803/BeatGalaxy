@@ -19,4 +19,8 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void PlayLevel()
+    {
+        SceneManager.LoadScene("Level_1");
+    }
 }
