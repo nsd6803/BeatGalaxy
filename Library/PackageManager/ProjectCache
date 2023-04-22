@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638176316080000000
-    m_Hash: 208085072
+      ticks: 638177620996924131
+    m_Hash: 1855631570
   m_LockFileStatus:
     m_FilePath: C:/Users/nsd68/Desktop/Unity/BeatGalaxy/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638176316080000000
-    m_Hash: 2658114967
+      ticks: 638177620996924131
+    m_Hash: 2765513573
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

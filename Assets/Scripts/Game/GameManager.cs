@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         //Wait for X seconds
         yield return new WaitForSeconds(2f);
         //Start the enemy spawning
-        GetComponent<EnemySpawner>().StartSpawning();
+       // GetComponent<EnemySpawner>().StartSpawning();
     }
 
 }
