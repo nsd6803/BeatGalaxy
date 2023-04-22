@@ -2160,15 +2160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79193eeedccea8a4fae7c02d09dcc9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 4474710549597131853, guid: be6f6826c436c044f8b0683e58591d70, type: 3}
-  - {fileID: 1625801649276996804, guid: f1342d64485633846abe0744fc6845de, type: 3}
-  - {fileID: 8864848999658685418, guid: 789f0165bef6d854f9b23f9345e11c80, type: 3}
-  spawnPoints:
-  - {fileID: 1536765298}
-  - {fileID: 177578923}
-  - {fileID: 2005859008}
-  spawnInterval: 2
 --- !u!114 &649944806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5777,15 +5768,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - waveName: Wave 1
-    noOfEnemies: 1
+    noOfEnemies: 3
     typeOfEnemies:
     - {fileID: 4474710549597131853, guid: be6f6826c436c044f8b0683e58591d70, type: 3}
+    - {fileID: 1625801649276996804, guid: f1342d64485633846abe0744fc6845de, type: 3}
+    - {fileID: 8864848999658685418, guid: 789f0165bef6d854f9b23f9345e11c80, type: 3}
     spawnInterval: 2
   - waveName: Wave 2
-    noOfEnemies: 1
+    noOfEnemies: 3
     typeOfEnemies:
+    - {fileID: 4474710549597131853, guid: be6f6826c436c044f8b0683e58591d70, type: 3}
     - {fileID: 1625801649276996804, guid: f1342d64485633846abe0744fc6845de, type: 3}
-    spawnInterval: 0
+    - {fileID: 8864848999658685418, guid: 789f0165bef6d854f9b23f9345e11c80, type: 3}
+    spawnInterval: 2
   - waveName: Final Wave
     noOfEnemies: 1
     typeOfEnemies:
