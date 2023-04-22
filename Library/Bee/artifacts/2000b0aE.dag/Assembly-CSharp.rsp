@@ -325,7 +325,6 @@
 "Assets/Scripts/CoinManager.cs"
 "Assets/Scripts/Exit.cs"
 "Assets/Scripts/Game/Boss.cs"
-"Assets/Scripts/Game/Enemy.cs"
 "Assets/Scripts/Game/EnemySpawner.cs"
 "Assets/Scripts/Game/Enemy_1.cs"
 "Assets/Scripts/Game/Enemy_2.cs"

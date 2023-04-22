@@ -6,10 +6,13 @@ using UnityEngine;
 public class PlanetHealth : MonoBehaviour
 {
 
-    public int pl_health = 0;
+    public int pl_health = 5;
 
-    void Update()
+    public void Damage(int damage)
     {
+        
+        pl_health -= damage;
+
         if(pl_health == 0)
         {
             Defeat();
@@ -20,4 +23,5 @@ public class PlanetHealth : MonoBehaviour
     {
         SceneManager.LoadScene("Defeat");
     }
+
 }

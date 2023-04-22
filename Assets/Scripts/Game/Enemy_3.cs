@@ -13,6 +13,16 @@ public class Enemy_3 : MonoBehaviour
     public Animator animator;
     public float attackInterval;
 
+    public PlanetHealth planetHealth;
+
+    private int damage_planet = 1;
+
+    void Start()
+    {
+        planetHealth = GameObject.FindGameObjectWithTag("Planet").GetComponent<PlanetHealth>();
+
+    }
+
     void Update()
     {
         if (timerCurrentTime > 0)
@@ -37,6 +47,16 @@ public class Enemy_3 : MonoBehaviour
         health--;
         if (health <= 0)
             Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        Debug.Log("BOOM");
+        if (collider.gameObject.name == "Planet")
+        {
+            Debug.Log("BOOM");
+            planetHealth.Damage(damage_planet);
+        }
     }
 
 }
