@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Space
   - Planet
+  - Ship
+  - Ship_2
+  - Ship_3
   layers:
   - Default
   - TransparentFX

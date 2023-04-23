@@ -53,7 +53,6 @@ public class Enemy_1 : MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D collider)
     {
-        Debug.Log("BOOM");
         if (collider.gameObject.name == "Planet")
         {
             Debug.Log("BOOM");

@@ -97,7 +97,7 @@ public class Spawner : MonoBehaviour
         coinManager.CoinStatus();
         GameObject tower = Instantiate(towersPrefabs[spawnID], spawnTowerRoot);
         tower.transform.position = position;
-        tower.transform.localScale -= new Vector3(0.6f, 0.6f, 0.0f);
+        tower.transform.localScale -= new Vector3(0.5f, 0.5f, 0.0f);
 
 
     }
