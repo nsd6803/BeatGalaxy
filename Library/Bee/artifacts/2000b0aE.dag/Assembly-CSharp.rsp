@@ -332,6 +332,7 @@
 "Assets/Scripts/Game/Enemy_2.cs"
 "Assets/Scripts/Game/Enemy_3.cs"
 "Assets/Scripts/Game/GameManager.cs"
+"Assets/Scripts/Game/Gun.cs"
 "Assets/Scripts/Game/ShipCost.cs"
 "Assets/Scripts/Game/Ship_1.cs"
 "Assets/Scripts/Game/Ship_2.cs"

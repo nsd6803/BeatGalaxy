@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1967173295320354198}
   - component: {fileID: 8140778269776114635}
   - component: {fileID: 2359913898636597364}
+  - component: {fileID: 7261987769120934696}
   m_Layer: 5
   m_Name: Base Ship
   m_TagString: Ship
@@ -110,7 +111,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0058135986, y: 0.95222473}
@@ -159,12 +160,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529420c3f9bafb64c958f4ebfe82fbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPrefab_1: {fileID: 7032184458350293363, guid: 83c7daf9208d2024f8b1b41975f929de,
+  newPrefab_1: {fileID: 3702032551023401967, guid: 22d32e12f48c6554b8811ef8b4325dc7,
     type: 3}
-  newPrefab_2: {fileID: 5951821191561242095, guid: de1505a939bd8ac4faec3053dda69213,
+  newPrefab_2: {fileID: 7032184458350293363, guid: 83c7daf9208d2024f8b1b41975f929de,
     type: 3}
   newPrefab_3: {fileID: 2287431775769070411, guid: 16c8f15d0df08b9449bac256e420cbf0,
     type: 3}
+  ship1: {fileID: 0}
+  collidedWithShip2: 0
+  collidedWithShip3: 0
+  collidedWithShip4: 0
+  sh1: {fileID: 0}
+  sh2: {fileID: 0}
+  sh3: {fileID: 0}
+  ship3_pos: {x: 0, y: 0, z: 0}
+  ship2_pos: {x: 0, y: 0, z: 0}
+  ship4_pos: {x: 0, y: 0, z: 0}
 --- !u!61 &1967173295320354198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -243,3 +254,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9571533, y: 0.2527771}
   m_EdgeRadius: 0
+--- !u!114 &7261987769120934696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439763373660356743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fe600cbf4677244bc63e4009a687db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5260921691607962145, guid: 9cccf2b7d1dea534694c2f28c758640e,
+    type: 3}
+  bulletSpeed: 10
+  fireRate: 0.5

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ship_3 : MonoBehaviour
 {
 
-    public bool collidedWithShip3 = false;
+    public bool collidedWithShip3_2 = false;
 
     GameObject sh3;
 
@@ -21,7 +21,7 @@ public class Ship_3 : MonoBehaviour
         {
             Debug.Log("Red+Yellow");
             sh3 = other.gameObject;
-            collidedWithShip3 = true;
+            collidedWithShip3_2 = true;
             ship3_pos = other.transform.position;
         }
     }

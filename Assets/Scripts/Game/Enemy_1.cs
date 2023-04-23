@@ -44,15 +44,11 @@ public class Enemy_1 : MonoBehaviour
         transform.Translate(-transform.up * moveSpeed);
     }
 
-    public void LoseHealth()
-    {
-        health--;
-        if (health <= 0)
-            Destroy(gameObject);
-    }
+
 
     private void OnTriggerEnter2D (Collider2D collider)
     {
+        Debug.Log("damage");
         if (collider.gameObject.name == "Planet")
         {
             Debug.Log("BOOM");
@@ -60,4 +56,10 @@ public class Enemy_1 : MonoBehaviour
         }
     }
 
+    public void LoseHealth()
+    {
+        health -= 10;
+        if (health <= 0)
+            Destroy(gameObject);
+    }
 }

@@ -144,7 +144,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4474710549597131853}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -168,9 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e807ceb76569f4eabdde78aa7a49d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
   attackPower: 0
-  moveSpeed: 2
+  moveSpeed: 0.72
   planetHealth: {fileID: 0}
   animator: {fileID: 0}
   attackInterval: 0
