@@ -24,24 +24,24 @@ public class Gun : MonoBehaviour
         Vector3 spawnPos = transform.position + transform.up * bulletOffset;
 
         // Создаем снаряд из префаба
-        GameObject bullet = Instantiate(bulletPrefab, spawnPos, Quaternion.identity, transform.parent);
+        bulletPrefab = Instantiate(bulletPrefab, spawnPos, Quaternion.identity, transform.parent);
 
         // Направляем снаряд вперед
-        bullet.GetComponent<Rigidbody2D>().velocity = transform.up * bulletSpeed;
+        bulletPrefab.GetComponent<Rigidbody2D>().velocity = transform.up * bulletSpeed;
 
         // Проверяем, что снаряд не вышел за границы сцены
-        if (bullet.transform.position.y > 80f)
+        if (bulletPrefab.transform.position.y > 80f)
         {
-            Destroy(bullet);
+            Destroy(bulletPrefab);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            collider.gameObject.GetComponent<Enemy_1>().LoseHealth();
-            Destroy(bulletPrefab);
+            collision.gameObject.GetComponent<Enemy_1>().LoseHealth();
+            Destroy(gameObject);
         }
     }
 }

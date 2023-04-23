@@ -42,12 +42,6 @@ public class Enemy_3 : MonoBehaviour
         transform.Translate(-transform.up * moveSpeed);
     }
 
-    public void LoseHealth_3()
-    {
-        health--;
-        if (health <= 0)
-            Destroy(gameObject);
-    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -57,6 +51,18 @@ public class Enemy_3 : MonoBehaviour
             Debug.Log("BOOM");
             planetHealth.Damage(damage_planet);
         }
+        if (collider.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("BOOM");
+            LoseHealth();
+        }
+    }
+
+    public void LoseHealth()
+    {
+        health -= 10;
+        if (health <= 0)
+            Destroy(gameObject);
     }
 
 }

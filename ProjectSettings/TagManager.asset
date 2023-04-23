@@ -12,6 +12,7 @@ TagManager:
   - Ship
   - Ship_2
   - Ship_3
+  - Bullet
   layers:
   - Default
   - TransparentFX

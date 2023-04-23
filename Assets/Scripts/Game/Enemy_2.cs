@@ -62,13 +62,6 @@ public class Enemy_2 : MonoBehaviour
         }
     }
 
-    public void LoseHealth_2()
-    {
-        health--;
-        if (health <= 0)
-            Destroy(gameObject);
-    }
-
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log("BOOM");
@@ -77,5 +70,17 @@ public class Enemy_2 : MonoBehaviour
             Debug.Log("BOOM");
             planetHealth.Damage(damage_planet);
         }
+        if (collider.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("BOOM");
+            LoseHealth();
+        }
+    }
+
+    public void LoseHealth()
+    {
+        health -= 10;
+        if (health <= 0)
+            Destroy(gameObject);
     }
 }

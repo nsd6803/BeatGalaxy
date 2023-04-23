@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8140778269776114635}
   - component: {fileID: 2359913898636597364}
   - component: {fileID: 7261987769120934696}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Base Ship
   m_TagString: Ship
   m_Icon: {fileID: 0}
@@ -270,3 +270,4 @@ MonoBehaviour:
     type: 3}
   bulletSpeed: 10
   fireRate: 0.5
+  bulletOffset: 0.5

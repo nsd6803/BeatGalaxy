@@ -54,6 +54,12 @@ public class Enemy_1 : MonoBehaviour
             Debug.Log("BOOM");
             planetHealth.Damage(damage_planet);
         }
+
+        if (collider.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("BOOM");
+            LoseHealth();
+        }
     }
 
     public void LoseHealth()
