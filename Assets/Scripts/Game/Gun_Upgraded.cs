@@ -37,8 +37,8 @@ public class Gun_Upgraded : MonoBehaviour
         //}
         if (bullet.transform.position.y >= -maxY)
         {
-            Destroy(bullet, 1.5f);
-            Destroy(bullet2, 1.5f);
+            Destroy(bullet, 1f);
+            Destroy(bullet2, 1f);
         }
     }
 

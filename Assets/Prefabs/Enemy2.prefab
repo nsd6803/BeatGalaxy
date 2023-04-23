@@ -106,6 +106,8 @@ MonoBehaviour:
   gameobject: {fileID: 0}
   animator: {fileID: 0}
   attackInterval: 0
+  hitEffect: {fileID: 3055794370093664184, guid: 0ec8ddb1a0632794d80e8ec146eb0d4c,
+    type: 3}
   planetHealth: {fileID: 0}
   coinManager: {fileID: 0}
 --- !u!95 &7036296155124845732

@@ -12,7 +12,7 @@ public class Enemy_2 : MonoBehaviour
 
     public Animator animator;
     public float attackInterval;
-
+    public GameObject hitEffect;
     public PlanetHealth planetHealth;
     public CoinManager coinManager;
     private int moving_direction = 0;
@@ -75,6 +75,8 @@ public class Enemy_2 : MonoBehaviour
 
         if (collider.gameObject.CompareTag("Bullet"))
         {
+            GameObject effect = Instantiate(hitEffect, collider.transform.position, Quaternion.identity);
+            Destroy(effect, 0.5f); 
             Destroy(collider.gameObject);
             LoseHealth();
 

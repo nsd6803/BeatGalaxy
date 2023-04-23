@@ -6,7 +6,7 @@ public class Enemy_3 : MonoBehaviour
 {
     public int health, attackPower;
     public float moveSpeed;
-
+    public GameObject hitEffect;
     private const float TIMER_MAX_TIME = 1f; //время таймера
     private float timerCurrentTime = TIMER_MAX_TIME;
     public GameObject gameobject;
@@ -55,6 +55,8 @@ public class Enemy_3 : MonoBehaviour
 
         if (collider.gameObject.CompareTag("Bullet"))
         {
+            GameObject effect = Instantiate(hitEffect, collider.transform.position, Quaternion.identity);
+            Destroy(effect, 0.5f); // 
             Destroy(collider.gameObject);
             LoseHealth();
 

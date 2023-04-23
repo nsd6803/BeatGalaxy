@@ -10,14 +10,14 @@ public class BossBasic : MonoBehaviour
     public float moveSpeed;
     private const float TIMER_MAX_TIME = 1f; //время таймера
     private float timerCurrentTime = TIMER_MAX_TIME;
-
+    public GameObject hitEffect;
     public HealthBar healthBarPrefab;
     public HealthBar healthBar;
     public PlanetHealth planetHealth;
 
     private int damage_planet = 1;
     public int attackDamage = 1;
-    public int EnragedAttackDamage = 10;
+    public int EnragedAttackDamage = 1;
 
 
     public float attackRange;
@@ -136,6 +136,8 @@ public class BossBasic : MonoBehaviour
 
         if (collider.gameObject.CompareTag("Bullet"))
         {
+            GameObject effect = Instantiate(hitEffect, collider.transform.position, Quaternion.identity);
+            Destroy(effect, 0.5f); 
             Debug.Log("BOOM");
             LoseHealth(5);
         }
@@ -149,7 +151,7 @@ public class BossBasic : MonoBehaviour
 
         //  healthBar.SetHealth(currentHealth);
 
-        if (currentHealth <= 25)
+        if (currentHealth <= 100)
         {
             GetComponent<Animator>().SetBool("isEnraged", true);
         }
@@ -165,7 +167,7 @@ public class BossBasic : MonoBehaviour
 
       //  healthBar.SetHealth(currentHealth);
 
-        if (currentHealth <= 25)
+        if (currentHealth <= 100)
         {
             GetComponent<Animator>().SetBool("isEnraged", true);
         }

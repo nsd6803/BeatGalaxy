@@ -16,6 +16,7 @@ public class CoinManager : MonoBehaviour
     private void Start()
     {
         coinText = GetComponentInChildren<TMP_Text>(); // инициализируем поле coinText с помощью метода GetComponentInChildren
+        CoinStatus();
     }
 
     void Update()

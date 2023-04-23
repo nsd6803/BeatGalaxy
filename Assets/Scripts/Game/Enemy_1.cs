@@ -11,7 +11,7 @@ public class Enemy_1 : MonoBehaviour
     private float timerCurrentTime = TIMER_MAX_TIME;
 
     public PlanetHealth planetHealth;
-
+    public GameObject hitEffect;
     private int damage_planet = 1;
     public CoinManager coinManager;
     public Animator animator;
@@ -58,6 +58,8 @@ public class Enemy_1 : MonoBehaviour
 
         if (collider.gameObject.CompareTag("Bullet"))
         {
+            GameObject effect = Instantiate(hitEffect, collider.transform.position, Quaternion.identity);
+            Destroy(effect, 0.5f); 
             Destroy(collider.gameObject);
             LoseHealth();
 

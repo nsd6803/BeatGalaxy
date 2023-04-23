@@ -35,7 +35,7 @@ public class Gun : MonoBehaviour
         // Проверяем, что снаряд не вышел за границы сцены
         if (bullet.transform.position.y >= -maxY)
         {
-            Destroy(bullet, 1.5f);
+            Destroy(bullet, 0.7f) ;
         }
     }
 

@@ -168,9 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b6b0196d6eb774082cf727ba823ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  currentHealth: 1000
+  maxHealth: 1100
+  currentHealth: 1100
   moveSpeed: 1
+  hitEffect: {fileID: 3055794370093664184, guid: 0ec8ddb1a0632794d80e8ec146eb0d4c,
+    type: 3}
   healthBarPrefab: {fileID: 0}
   healthBar: {fileID: 0}
   planetHealth: {fileID: 0}
