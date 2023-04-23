@@ -6,7 +6,7 @@ public class Enemy_2 : MonoBehaviour
 {
     public int health, attackPower;
     public float moveSpeed;
-
+    public GameObject gameobject;
     private const float TIMER_MAX_TIME = 1f; //время таймера
     private float timerCurrentTime = TIMER_MAX_TIME;
 
@@ -14,12 +14,14 @@ public class Enemy_2 : MonoBehaviour
     public float attackInterval;
 
     public PlanetHealth planetHealth;
-
+    public CoinManager coinManager;
     private int moving_direction = 0;
     private int damage_planet = 1;
 
     void Start()
     {
+        gameobject = GameObject.Find("CoinBar");
+        coinManager = gameobject.GetComponentInChildren<CoinManager>();
         planetHealth = GameObject.FindGameObjectWithTag("Planet").GetComponent<PlanetHealth>();
 
     }
@@ -42,45 +44,53 @@ public class Enemy_2 : MonoBehaviour
     {
         if (moving_direction == 0)
         {
-            transform.Translate(-transform.up * moveSpeed);
+            transform.Translate((-transform.up * moveSpeed)/2);
             moving_direction += 1;
         }
         else if (moving_direction == 1)
         {
-            transform.Translate(transform.right * moveSpeed);
+            transform.Translate((transform.right * moveSpeed)/2);
             moving_direction += 1;
         }
         else if (moving_direction == 2)
         {
-            transform.Translate(-transform.up * moveSpeed);
+            transform.Translate((-transform.up * moveSpeed)/2);
             moving_direction += 1;
         }
         else if (moving_direction == 3)
         {
-            transform.Translate(-transform.right * moveSpeed);
+            transform.Translate((-transform.right * moveSpeed)/2);
             moving_direction = 0;
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("BOOM");
         if (collider.gameObject.name == "Planet")
         {
-            Debug.Log("BOOM");
+            Destroy(gameObject);
             planetHealth.Damage(damage_planet);
         }
+
         if (collider.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("BOOM");
+            Destroy(collider.gameObject);
             LoseHealth();
+
         }
     }
 
     public void LoseHealth()
     {
+
         health -= 10;
         if (health <= 0)
+        {
+            coinManager.coinCount += 5;
+            coinManager.CoinStatus();
             Destroy(gameObject);
+        }
+            
     }
 }

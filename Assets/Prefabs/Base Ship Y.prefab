@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 696050998727233398}
   - component: {fileID: 5220112936697165171}
   - component: {fileID: -7265606409480882201}
+  - component: {fileID: -4623397229238562517}
   m_Layer: 5
   m_Name: Base Ship Y
   m_TagString: Ship_2
@@ -143,3 +144,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4623397229238562517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439763373660356743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fe600cbf4677244bc63e4009a687db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5260921691607962145, guid: 9cccf2b7d1dea534694c2f28c758640e,
+    type: 3}
+  bulletSpeed: 10
+  fireRate: 5
+  bulletOffset: 0.5

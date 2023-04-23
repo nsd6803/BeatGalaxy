@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8876885195786407981}
   - component: {fileID: 4605350917568546680}
   - component: {fileID: 1002812272385542979}
+  - component: {fileID: 7141725165688335711}
   m_Layer: 0
   m_Name: 2x1 ship
   m_TagString: Untagged
@@ -106,3 +107,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7141725165688335711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3702032551023401967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822efcd5a5201b344a974f4cff34159c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab_1: {fileID: 1269743378993145950, guid: 865028ae9a15864429da93457675ac5b,
+    type: 3}
+  bulletPrefab_2: {fileID: 1269743378993145950, guid: 865028ae9a15864429da93457675ac5b,
+    type: 3}
+  bulletSpeed: 10
+  fireRate: 2.5
+  bulletOffset: 0.5

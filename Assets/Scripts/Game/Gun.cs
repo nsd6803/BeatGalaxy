@@ -6,14 +6,17 @@ public class Gun : MonoBehaviour
 {
     public GameObject bulletPrefab; // префаб снаряда
     public float bulletSpeed = 10f; // скорость полета снаряда
-    public float fireRate = 20f; // задержка между выстрелами
-    private float nextFireTime = 0f; // время следующего выстрела
+    public float fireRate = 5f; // задержка между выстрелами
+    private float nextFireTime = 1f; // время следующего выстрела
     public float bulletOffset = 0.5f;
-
+    public float maxY = 10f;
     private void Update()
     {
         if (Time.time >= nextFireTime)
         {
+            if(bulletPrefab.transform.position.y > 50) {
+                
+            }
             nextFireTime = Time.time + fireRate; // обновляем время следующего выстрела
             Shoot(); // вызов метода стрельбы
         }
@@ -24,15 +27,15 @@ public class Gun : MonoBehaviour
         Vector3 spawnPos = transform.position + transform.up * bulletOffset;
 
         // Создаем снаряд из префаба
-        bulletPrefab = Instantiate(bulletPrefab, spawnPos, Quaternion.identity, transform.parent);
+        GameObject bullet = Instantiate(bulletPrefab, spawnPos, Quaternion.identity, transform.parent);
 
         // Направляем снаряд вперед
-        bulletPrefab.GetComponent<Rigidbody2D>().velocity = transform.up * bulletSpeed;
+        bullet.GetComponent<Rigidbody2D>().velocity = transform.up * bulletSpeed;
 
         // Проверяем, что снаряд не вышел за границы сцены
-        if (bulletPrefab.transform.position.y > 80f)
+        if (bullet.transform.position.y >= -maxY)
         {
-            Destroy(bulletPrefab);
+            Destroy(bullet, 1.5f);
         }
     }
 
@@ -40,8 +43,9 @@ public class Gun : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<Enemy_1>().LoseHealth();
             Destroy(gameObject);
+            
+            //Instantiate(hitEffect, transform.position, Quaternion.identity);
         }
     }
 }

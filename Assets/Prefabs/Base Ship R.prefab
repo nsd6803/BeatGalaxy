@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3621485422040763230}
   - component: {fileID: 3630348746022570970}
   - component: {fileID: 3515707026996118351}
+  - component: {fileID: -6422750563229262203}
   - component: {fileID: 1060942355013245973}
   m_Layer: 5
   m_Name: Base Ship R
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eefcb19e30cd6c42803ff293559c97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collidedWithShip3: 0
+  collidedWithShip3_2: 0
   ship3_pos: {x: 0, y: 0, z: 0}
 --- !u!95 &3515707026996118351
 Animator:
@@ -203,6 +204,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6422750563229262203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439763373660356743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fe600cbf4677244bc63e4009a687db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5260921691607962145, guid: 9cccf2b7d1dea534694c2f28c758640e,
+    type: 3}
+  bulletSpeed: 10
+  fireRate: 5
+  bulletOffset: 0.5
 --- !u!114 &1060942355013245973
 MonoBehaviour:
   m_ObjectHideFlags: 0

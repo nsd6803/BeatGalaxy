@@ -6,19 +6,21 @@ public class Enemy_1 : MonoBehaviour
 {
     public int health, attackPower;
     public float moveSpeed;
-
+    public GameObject gameobject;
     private const float TIMER_MAX_TIME = 1f; //время таймера
     private float timerCurrentTime = TIMER_MAX_TIME;
 
     public PlanetHealth planetHealth;
 
     private int damage_planet = 1;
-
+    public CoinManager coinManager;
     public Animator animator;
     public float attackInterval;
 
     void Start()
     {
+        gameobject = GameObject.Find("CoinBar");
+        coinManager = gameobject.GetComponentInChildren<CoinManager>();
         planetHealth = GameObject.FindGameObjectWithTag("Planet").GetComponent<PlanetHealth>();
 
     }
@@ -41,24 +43,24 @@ public class Enemy_1 : MonoBehaviour
     //Moving forward
     void Move()
     {
-        transform.Translate(-transform.up * moveSpeed);
+        transform.Translate((-transform.up * moveSpeed)/2);
     }
 
 
 
-    private void OnTriggerEnter2D (Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("damage");
         if (collider.gameObject.name == "Planet")
         {
-            Debug.Log("BOOM");
+            Destroy(gameObject);
             planetHealth.Damage(damage_planet);
         }
 
         if (collider.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("BOOM");
+            Destroy(collider.gameObject);
             LoseHealth();
+
         }
     }
 
@@ -66,6 +68,10 @@ public class Enemy_1 : MonoBehaviour
     {
         health -= 10;
         if (health <= 0)
+        {
+            coinManager.coinCount += 5;
+            coinManager.CoinStatus();
             Destroy(gameObject);
+        }
     }
 }

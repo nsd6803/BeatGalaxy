@@ -13,7 +13,7 @@ public class PlanetHealth : MonoBehaviour
         
         pl_health -= damage;
 
-        if(pl_health == 0)
+        if(pl_health <= 0)
         {
             Defeat();
         }

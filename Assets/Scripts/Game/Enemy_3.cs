@@ -9,16 +9,18 @@ public class Enemy_3 : MonoBehaviour
 
     private const float TIMER_MAX_TIME = 1f; //время таймера
     private float timerCurrentTime = TIMER_MAX_TIME;
-
+    public GameObject gameobject;
     public Animator animator;
     public float attackInterval;
-
+    public CoinManager coinManager;
     public PlanetHealth planetHealth;
 
     private int damage_planet = 1;
 
     void Start()
     {
+        gameobject = GameObject.Find("CoinBar");
+        coinManager = gameobject.GetComponentInChildren<CoinManager>();
         planetHealth = GameObject.FindGameObjectWithTag("Planet").GetComponent<PlanetHealth>();
 
     }
@@ -39,22 +41,23 @@ public class Enemy_3 : MonoBehaviour
     //Moving forward
     void Move()
     {
-        transform.Translate(-transform.up * moveSpeed);
+        transform.Translate((-transform.up * moveSpeed)/2);
     }
 
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("BOOM");
         if (collider.gameObject.name == "Planet")
         {
-            Debug.Log("BOOM");
+            Destroy(gameObject);
             planetHealth.Damage(damage_planet);
         }
+
         if (collider.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("BOOM");
+            Destroy(collider.gameObject);
             LoseHealth();
+
         }
     }
 
@@ -62,7 +65,11 @@ public class Enemy_3 : MonoBehaviour
     {
         health -= 10;
         if (health <= 0)
+        {
+            coinManager.coinCount += 5;
+            coinManager.CoinStatus();
             Destroy(gameObject);
+        }
     }
 
 }

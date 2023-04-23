@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2532699357671686618}
   - component: {fileID: -962376075144572577}
   - component: {fileID: 2498718269119646864}
+  - component: {fileID: 6664771876174694687}
   m_Layer: 6
   m_Name: projectilePrefab
   m_TagString: Bullet
@@ -155,3 +156,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6664771876174694687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5260921691607962145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4988b0a6f9fe38b44bbaaad8f378cbab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

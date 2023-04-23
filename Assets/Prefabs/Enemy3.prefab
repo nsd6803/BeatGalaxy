@@ -100,11 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c8a377c992a004eb7a57d0f800bd5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 40
   attackPower: 0
-  moveSpeed: 0.8
+  moveSpeed: 1.42
+  gameobject: {fileID: 0}
   animator: {fileID: 0}
   attackInterval: 0
+  coinManager: {fileID: 0}
   planetHealth: {fileID: 0}
 --- !u!95 &1710606490192165390
 Animator:
@@ -140,7 +142,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.002020657, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14, y: 0.27}
+  m_Size: {x: 0.25719815, y: 0.27}
   m_EdgeRadius: 0
 --- !u!50 &-9005442510836829549
 Rigidbody2D:
